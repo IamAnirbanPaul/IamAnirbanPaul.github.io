@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anirban Paul | D365 FnO | X++ | Architecting Scalable ERP Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #007AFF;
+            --secondary-color: #5856D6;
+            --text-primary: #1D1D1F;
+            --text-secondary: #86868B;
+            --background-primary: #FFFFFF;
+            --background-secondary: #F5F5F7;
+            --border-color: #D2D2D7;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+            animation: float 20s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        .hero-content {
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .cta-button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .cta-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Sections */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--text-primary);
+        }
+
+        /* About Section */
+        .about {
+            background: var(--background-secondary);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            margin: 0 auto;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .skill-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .skill-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        .skill-card p {
+            color: var(--text-secondary);
+        }
+
+        /* Blog Section */
+        .blog {
+            background: var(--background-secondary);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .blog-header {
+            height: 200px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .blog-content {
+            padding: 30px;
+        }
+
+        .blog-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        .blog-card p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .blog-date {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Code Block */
+        .code-block {
+            background: #1d1d1f;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-family: 'SF Mono', Monaco, monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+
+        .code-block .keyword {
+            color: #ff7b72;
+        }
+
+        .code-block .string {
+            color: #a5d6ff;
+        }
+
+        .code-block .comment {
+            color: #8b949e;
+        }
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary-color);
+        }
+
+        .contact-btn.primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .contact-btn.secondary {
+            background: transparent;
+            color: var(--primary-color);
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 122, 255, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-primary);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Anirban Paul</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Crafting Scalable ERP Experiences with Code & Clarity</h1>
+            <p>Senior D365 FinOps Technical Consultant | Blogger | Architect-in-Making</p>
+            <p style="font-size: 1rem; margin-top: 1rem; opacity: 0.8;">Sharing clean code, powerful patterns, and real-world solutions in Microsoft Dynamics 365 Finance & Operations</p>
+            <div style="margin-top: 2rem; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="#blog" class="cta-button">Explore My Blog</a>
+                <a href="#contact" class="cta-button" style="background: transparent; border: 2px solid rgba(255,255,255,0.5);">Let's Connect</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">👨‍💻</div>
+                <div class="about-text">
+                    <h3>Hello! I'm Anirban Paul</h3>
+                    <p>I'm a <strong>Senior Technical Consultant</strong> specializing in <strong>Microsoft Dynamics 365 Finance & Operations (FnO)</strong>. With hands-on experience in <strong>X++, C#, .NET, Azure,</strong> and <strong>SQL</strong>, I design and build enterprise-grade solutions for global clients.</p>
+                    <p>Currently working at <strong>Deloitte</strong>, I previously honed my skills at <strong>PwC India</strong> and have been a part of high-impact ERP implementations across multiple domains. I'm passionate about <strong>clean code, reusable patterns, performance tuning</strong>, and making D365 development less painful for others through thoughtful storytelling, architecture thinking, and automation.</p>
+                    <p><strong>In this space, you'll find:</strong></p>
+                    <ul style="margin-left: 20px; color: var(--text-secondary);">
+                        <li>Real-world problem-solving in D365 FnO</li>
+                        <li>Reusable code snippets in X++</li>
+                        <li>Architecture patterns & performance best practices</li>
+                        <li>Personal learnings from the consulting trenches</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">My Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>D365 Finance & Operations Development</h3>
+                    <p>Customization using <strong>X++</strong>, Data Entities, Event Handlers, Extensions. Security roles, workflows, and reporting (SSRS, Power BI Embedded). Integration using <strong>OData, Batch Jobs, Data Management Framework</strong>, Dual Write.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">☁️</div>
+                    <h3>Azure & Cloud Integration</h3>
+                    <p>Logic Apps, Azure Functions, Service Bus. Lifecycle Services (LCS) management and automation. CI/CD for D365 using <strong>Azure DevOps Pipelines</strong>.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📊</div>
+                    <h3>Data & Performance</h3>
+                    <p>Performance optimization, query tuning, caching patterns. SQL diagnostics & debugging tools for D365. Clean architecture and layered coding in large-scale ERP apps.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📚</div>
+                    <h3>Reusable IP & Migration Tools</h3>
+                    <p>Designing internal IP tools for master/transactional data migration. Creating reusable architecture for implementation accelerators.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section blog">
+        <div class="container">
+            <h2 class="section-title">Latest Insights</h2>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 40px; font-style: italic;">A few handpicked posts from the blog...</p>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-header">🧠</div>
+                    <div class="blog-content">
+                        <h3>Why Clean X++ Code is Rare — and How to Write It Anyway</h3>
+                        <p>Exploring the challenges of maintaining clean code in D365 FnO and practical patterns for better X++ development.</p>
+                        <div class="code-block">
+<span class="comment">// Clean X++ pattern example</span>
+<span class="keyword">public class</span> <span class="string">CustomerService</span>
+{
+    <span class="keyword">public static</span> CustAccount createCustomer(
+        <span class="string">CustomerCreateContract</span> _contract)
+    {
+        <span class="keyword">validate</span>(_contract);
+        
+        <span class="keyword">return</span> CustomerFactory::create(_contract)
+            .withDefaults()
+            .save();
+    }
+}
+                        </div>
+                        <div class="blog-date">June 20, 2024</div>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-header">🔄</div>
+                    <div class="blog-content">
+                        <h3>Automating Master Data Migration: My Reusable Toolset for D365</h3>
+                        <p>Building reusable IP tools for efficient master and transactional data migration in D365 implementations.</p>
+                        <div class="code-block">
+<span class="comment">// Data migration framework pattern</span>
+<span class="keyword">class</span> <span class="string">DataMigrationManager</span>
+{
+    <span class="keyword">public void</span> migrate(<span class="string">DataMigrationConfig</span> _config)
+    {
+        <span class="keyword">var</span> strategy = <span class="string">MigrationStrategyFactory</span>::create(_config);
+        <span class="keyword">var</span> validator = <span class="keyword">new</span> <span class="string">DataValidator</span>();
+        
+        strategy.execute(validator);
+    }
+}
+                        </div>
+                        <div class="blog-date">June 15, 2024</div>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-header">🧩</div>
+                    <div class="blog-content">
+                        <h3>Event Handler or Extension — The Pattern That Scales</h3>
+                        <p>Deep dive into D365 extensibility patterns and when to choose Event Handlers vs Extensions for maintainable solutions.</p>
+                        <div class="code-block">
+<span class="comment">// Event Handler pattern for extensibility</span>
+[<span class="string">EventHandler</span>(<span class="keyword">objectStr</span>(SalesTable), 
+           <span class="keyword">tableStr</span>(SalesTable), 
+           <span class="string">XppPreEvent::updating</span>)]
+<span class="keyword">public static void</span> SalesTable_onUpdating(
+    <span class="string">Common</span> _sender, 
+    <span class="string">XppPreEventArgs</span> _e)
+{
+    <span class="comment">// Custom validation logic</span>
+    <span class="string">SalesTableValidator</span>::validateUpdate(_sender);
+}
+                        </div>
+                        <div class="blog-date">June 10, 2024</div>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-header">📐</div>
+                    <div class="blog-content">
+                        <h3>System Design Thinking Applied to ERP Projects</h3>
+                        <p>Bringing software architecture principles to ERP implementations for better scalability and maintainability.</p>
+                        <div class="code-block">
+<span class="comment">// Layered architecture in D365</span>
+<span class="keyword">interface</span> <span class="string">IOrderProcessor</span>
+{
+    <span class="keyword">void</span> processOrder(<span class="string">SalesId</span> _salesId);
+}
+
+<span class="keyword">class</span> <span class="string">OrderProcessorService</span> <span class="keyword">implements</span> <span class="string">IOrderProcessor</span>
+{
+    <span class="keyword">public void</span> processOrder(<span class="string">SalesId</span> _salesId)
+    {
+        <span class="comment">// Business logic separation</span>
+    }
+}
+                        </div>
+                        <div class="blog-date">June 5, 2024</div>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-header">🔐</div>
+                    <div class="blog-content">
+                        <h3>Azure AD + D365: Securing APIs and Integrations Without the Pain</h3>
+                        <p>Practical guide to securing D365 integrations with Azure AD, including OData endpoints and custom APIs.</p>
+                        <div class="code-block">
+<span class="comment">// Secure API integration pattern</span>
+<span class="keyword">public class</span> <span class="string">SecureAPIController</span> <span class="keyword">extends</span> <span class="string">ApiController</span>
+{
+    [<span class="string">HttpPost</span>, <span class="string">Authorize</span>]
+    <span class="keyword">public</span> ActionResult processData(
+        [<span class="string">FromBody</span>] <span class="string">ProcessDataContract</span> _data)
+    {
+        <span class="keyword">return</span> <span class="keyword">this</span>.executeWithAuth(() => {
+            <span class="keyword">return</span> BusinessLogic::process(_data);
+        });
+    }
+}
+                        </div>
+                        <div class="blog-date">May 30, 2024</div>
+                    </div>
+                </article>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="blog/index.html" class="contact-btn secondary" style="display: inline-block;">→ Read all articles</a>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Want to Connect or Collaborate?</h2>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 40px; text-align: center;">
+                I love connecting with fellow developers, architects, and ERP enthusiasts. Whether you want to collaborate on a tool, need consulting help, or just want to geek out over design patterns, drop a message!
+            </p>
+            <div class="contact-buttons">
+                <a href="mailto:anirbanpaul.work@gmail.com" class="contact-btn primary">📬 Contact Me</a>
+                <a href="https://www.linkedin.com/in/anirban-dev-paul/" target="_blank" class="contact-btn secondary">🌐 LinkedIn</a>
+                <!-- <a href="#" target="_blank" class="contact-btn secondary">🌐 GitHub</a> -->
+                <!-- <a href="#" target="_blank" class="contact-btn secondary">🌐 Twitter</a> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Anirban Paul. Architecting scalable ERP solutions with passion and precision.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.8)';
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.skill-card, .blog-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
