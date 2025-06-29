@@ -20,7 +20,7 @@ pagination:
   disableAliases: false
   pagerSize: 5
 
-# googleAnalytics: UA-123-45
+googleAnalytics: G-SHH0P1PBPM
 
 minify:
   disableXML: true
