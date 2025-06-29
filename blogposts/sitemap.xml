@@ -2,23 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://IamAnirbanPaul.github.io/blogs/1.-first-test-post/</loc>
+    <lastmod>2025-06-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://IamAnirbanPaul.github.io/blogs/2.-second-test-post/</loc>
+    <lastmod>2025-06-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://IamAnirbanPaul.github.io/blogs/3.-third-test-post/</loc>
+    <lastmod>2025-06-30T00:41:56+05:30</lastmod>
+  </url><url>
     <loc>https://IamAnirbanPaul.github.io/</loc>
     <lastmod>2025-06-30T00:41:56+05:30</lastmod>
   </url><url>
     <loc>https://IamAnirbanPaul.github.io/blogs/</loc>
     <lastmod>2025-06-30T00:41:56+05:30</lastmod>
   </url><url>
-    <loc>https://IamAnirbanPaul.github.io/blogs/2.-second-test-post/</loc>
-    <lastmod>2025-06-25T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://IamAnirbanPaul.github.io/tags/</loc>
-    <lastmod>2025-06-25T00:00:00+00:00</lastmod>
+    <lastmod>2025-06-30T00:41:56+05:30</lastmod>
   </url><url>
     <loc>https://IamAnirbanPaul.github.io/tags/test/</loc>
-    <lastmod>2025-06-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://IamAnirbanPaul.github.io/blogs/1.-first-test-post/</loc>
-    <lastmod>2025-06-24T00:00:00+00:00</lastmod>
+    <lastmod>2025-06-30T00:41:56+05:30</lastmod>
   </url><url>
     <loc>https://IamAnirbanPaul.github.io/categories/</loc>
   </url><url>

@@ -24,10 +24,10 @@
       <description>&lt;p&gt;This is my second test blog post using Hugo PaperMod.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>3.Third Test Post</title>
-      <link>http://localhost:1313/blogs/3.third-test-post/</link>
+      <title>3rd Test Post</title>
+      <link>http://localhost:1313/blogs/3.-third-test-post/</link>
       <pubDate>Mon, 30 Jun 2025 00:41:56 +0530</pubDate>
-      <guid>http://localhost:1313/blogs/3.third-test-post/</guid>
+      <guid>http://localhost:1313/blogs/3.-third-test-post/</guid>
       <description></description>
     </item>
   </channel>
