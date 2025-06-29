@@ -4,6 +4,10 @@ languageCode: en-us
 copyright: "© Anirban Paul 2025"
 theme: PaperMod
 
+caches:
+  images:
+    dir: :cacheDir/images
+    
 enableInlineShortcodes: true
 enableRobotsTXT: true
 buildDrafts: false
