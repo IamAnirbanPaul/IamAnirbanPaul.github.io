@@ -1,4 +1,4 @@
-baseURL: /blogposts/
+baseURL: "https://IamAnirbanPaul.github.io/"
 title: Blogs
 languageCode: en-us
 copyright: "© Anirban Paul 2025"
@@ -48,7 +48,7 @@ params:
     hideCopyright: true
 
   ShowReadingTime: true
-  ShowShareButtons: false
+  ShowShareButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
@@ -73,16 +73,16 @@ params:
   profileMode:
     enabled: true # needs to be explicitly set
     title: Hey 👋 I'm Anirban
-    subtitle: "Welcome to my blog"
-    imageUrl: "../assets/images/profile-ghibli.png"
+    subtitle: "Welcome to my blog!"
+    imageUrl: "assets/images/profile-ghibli.png"
     imageWidth: 200
     imageHeight: 200
     imageTitle: Ghibli image
     buttons:
       - name: Blogs
-        url: blogs/
+        url: /blogs/
       - name: Portfolio
-        url: ../
+        url: /
 
   # home-info mode
   # homeInfoParams:
@@ -121,7 +121,7 @@ menu:
   main:
     - identifier: home
       name: Home
-      url: /
+      url: /blogposts/
       weight: 1
     - identifier: blogs
       name: Blogs

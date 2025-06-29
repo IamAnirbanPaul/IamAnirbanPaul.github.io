@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Test on Blogs</title>
+    <link>https://IamAnirbanPaul.github.io/tags/test/</link>
+    <description>Recent content in Test on Blogs</description>
+    <generator>Hugo -- 0.147.9</generator>
+    <language>en-us</language>
+    <copyright>Anirban Paul 2025</copyright>
+    <lastBuildDate>Wed, 25 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://IamAnirbanPaul.github.io/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2nd test Post</title>
+      <link>https://IamAnirbanPaul.github.io/blogs/2.-second-test-post/</link>
+      <pubDate>Wed, 25 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://IamAnirbanPaul.github.io/blogs/2.-second-test-post/</guid>
+      <description>&lt;p&gt;This is my second test blog post using Hugo PaperMod.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>1st Test Post</title>
+      <link>https://IamAnirbanPaul.github.io/blogs/1.-first-test-post/</link>
+      <pubDate>Tue, 24 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://IamAnirbanPaul.github.io/blogs/1.-first-test-post/</guid>
+      <description>Desc Text.</description>
+    </item>
+  </channel>
+</rss>

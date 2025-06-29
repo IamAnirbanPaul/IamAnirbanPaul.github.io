@@ -2,16 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/blogposts/</loc>
+    <loc>https://IamAnirbanPaul.github.io/</loc>
+    <lastmod>2025-06-30T00:41:56+05:30</lastmod>
+  </url><url>
+    <loc>https://IamAnirbanPaul.github.io/blogs/</loc>
+    <lastmod>2025-06-30T00:41:56+05:30</lastmod>
+  </url><url>
+    <loc>https://IamAnirbanPaul.github.io/blogs/2.-second-test-post/</loc>
     <lastmod>2025-06-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blogposts/blogs/</loc>
+    <loc>https://IamAnirbanPaul.github.io/tags/</loc>
     <lastmod>2025-06-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blogposts/categories/</loc>
+    <loc>https://IamAnirbanPaul.github.io/tags/test/</loc>
+    <lastmod>2025-06-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blogposts/search/</loc>
+    <loc>https://IamAnirbanPaul.github.io/blogs/1.-first-test-post/</loc>
+    <lastmod>2025-06-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blogposts/tags/</loc>
+    <loc>https://IamAnirbanPaul.github.io/categories/</loc>
+  </url><url>
+    <loc>https://IamAnirbanPaul.github.io/search/</loc>
+  </url><url>
+    <loc>https://IamAnirbanPaul.github.io/blogposts/</loc>
   </url>
 </urlset>
