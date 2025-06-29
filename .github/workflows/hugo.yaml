@@ -26,6 +26,7 @@ concurrency:
 defaults:
   run:
     shell: bash
+    working-directory: blog-src
 
 jobs:
   # Build job
@@ -66,7 +67,7 @@ jobs:
       - name: Build with Hugo
         run: |
           hugo \
-            --source blog-src \
+            --destination ../blogposts \
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
@@ -81,7 +82,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: blog-src/public
+          path: ../blogposts
 
   # Deployment job
   deploy:
