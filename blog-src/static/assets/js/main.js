@@ -154,3 +154,38 @@ setTimeout(() => {
     const originalText = heroTitle.textContent;
     typeWriter(heroTitle, originalText, 50);
 }, 1000);
+
+// Mobile Navigation
+const navToggle = document.getElementById('navToggle');
+const navSidebar = document.getElementById('navSidebar');
+const navOverlay = document.getElementById('navOverlay');
+const sidebarLinks = document.querySelectorAll('.nav-sidebar .nav-links a');
+
+function toggleNav() {
+    navToggle.classList.toggle('active');
+    navSidebar.classList.toggle('active');
+    navOverlay.classList.toggle('active');
+    document.body.style.overflow = navSidebar.classList.contains('active') ? 'hidden' : 'auto';
+}
+
+function closeNav() {
+    navToggle.classList.remove('active');
+    navSidebar.classList.remove('active');
+    navOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+navToggle.addEventListener('click', toggleNav);
+navOverlay.addEventListener('click', closeNav);
+
+// Close sidebar when clicking on a link
+sidebarLinks.forEach(link => {
+    link.addEventListener('click', closeNav);
+});
+
+// Close sidebar on escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && navSidebar.classList.contains('active')) {
+        closeNav();
+    }
+});
