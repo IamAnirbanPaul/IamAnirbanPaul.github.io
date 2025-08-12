@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Extensibility on iamanirbanpaul</title>
+    <link>https://IamAnirbanPaul.github.io/tags/extensibility/</link>
+    <description>Recent content in Extensibility on iamanirbanpaul</description>
+    <generator>Hugo -- 0.147.9</generator>
+    <language>en-us</language>
+    <copyright>Anirban Paul 2025</copyright>
+    <lastBuildDate>Thu, 10 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://IamAnirbanPaul.github.io/tags/extensibility/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hold My Context While I CoC This 🍺🪄</title>
+      <link>https://IamAnirbanPaul.github.io/blogs/2-disposablecontext/</link>
+      <pubDate>Thu, 10 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://IamAnirbanPaul.github.io/blogs/2-disposablecontext/</guid>
+      <description>Need to pass data downstream in your X&#43;&#43; CoC or framework call without polluting method signatures? Enter Disposable Contexts — your elegant and type-safe solution!</description>
+    </item>
+  </channel>
+</rss>
