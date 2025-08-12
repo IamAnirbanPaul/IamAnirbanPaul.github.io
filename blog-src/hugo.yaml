@@ -1,5 +1,5 @@
 baseURL: "https://IamAnirbanPaul.github.io/"
-title: Blogs
+title: iamanirbanpaul
 languageCode: en-us
 copyright: "© Anirban Paul 2025"
 theme: PaperMod
@@ -72,8 +72,9 @@ params:
   # profile-mode
   profileMode:
     enabled: true # needs to be explicitly set
-    title: Hey 👋 I'm Anirban
-    subtitle: "Welcome to my blog!"
+    title: try {adulting();} catch (Exception::Life) {retry;}
+    subtitle: "Hey 👋 I'm Anirban — your friendly neighborhood X++ wrangler. <br>
+    Logging stack traces from reality, one blog post at a time."
     imageUrl: "assets/images/profile-ghibli.png"
     imageWidth: 200
     imageHeight: 200
@@ -83,6 +84,9 @@ params:
         url: /blogs/
       - name: Portfolio
         url: /
+      - name: ☕ Buy Me a Coffee
+        url: https://coff.ee/iamanirbanpaul
+
 
   # home-info mode
   # homeInfoParams:

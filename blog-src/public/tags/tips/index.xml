@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tips on iamanirbanpaul</title>
+    <link>http://localhost:1313/tags/tips/</link>
+    <description>Recent content in Tips on iamanirbanpaul</description>
+    <generator>Hugo -- 0.147.9</generator>
+    <language>en-us</language>
+    <copyright>Anirban Paul 2025</copyright>
+    <lastBuildDate>Wed, 09 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/tips/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>🥡 How to Pack a Container Like a Bengali Mom Packs a Lunchbox</title>
+      <link>http://localhost:1313/blogs/1-xppcontainerception/</link>
+      <pubDate>Wed, 09 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blogs/1-xppcontainerception/</guid>
+      <description>&lt;p&gt;🧊 &lt;strong&gt;Ever wanted to insert one container inside another in X++?&lt;/strong&gt;&lt;br&gt;
+Whether you&amp;rsquo;re working with temporary in-memory structures or building payloads for integrations, this trick can help you dynamically group rows into containers — just like a 2D array!&lt;/p&gt;
+&lt;p&gt;Let’s dive in. 💻&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-the-problem&#34;&gt;🚀 The Problem&lt;/h2&gt;
+&lt;p&gt;You want to loop through a dataset (like IDs and names), create a container for each row, and &lt;strong&gt;nest those containers into one master container&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
