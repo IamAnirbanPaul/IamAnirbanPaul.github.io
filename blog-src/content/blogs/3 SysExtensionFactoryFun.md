@@ -1,7 +1,7 @@
 ---
 title: "🔌 SysExtension Framework in D365FO: How I Learned to Stop Worrying and Love the Factory"
 date: 2025-07-11
-draft: false
+draft: true
 weight: 3
 author: "Anirban Paul"
 tags: ["X++", "D365 FinOps", "Design Pattern"]

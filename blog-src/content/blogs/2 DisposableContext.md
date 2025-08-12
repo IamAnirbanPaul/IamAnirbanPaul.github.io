@@ -2,7 +2,7 @@
 title: "Hold My Context While I CoC This 🍺🪄"
 description: "Need to pass data downstream in your X++ CoC or framework call without polluting method signatures? Enter Disposable Contexts — your elegant and type-safe solution!"
 date: 2025-07-10
-draft: false
+draft: true
 weight: 2
 author: "Anirban Paul"
 tags: ["X++", "D365 FinOps", "Extensibility"]
