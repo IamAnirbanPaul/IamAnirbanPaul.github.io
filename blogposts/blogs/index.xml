@@ -7,7 +7,7 @@
     <generator>Hugo -- 0.147.9</generator>
     <language>en-us</language>
     <copyright>Anirban Paul 2025</copyright>
-    <lastBuildDate>Fri, 11 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://IamAnirbanPaul.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>🥡 How to Pack a Container Like a Bengali Mom Packs a Lunchbox</title>
@@ -26,20 +26,7 @@ Whether you&amp;rsquo;re working with temporary in-memory structures or building
       <link>https://IamAnirbanPaul.github.io/blogs/2-disposablecontext/</link>
       <pubDate>Thu, 10 Jul 2025 00:00:00 +0000</pubDate>
       <guid>https://IamAnirbanPaul.github.io/blogs/2-disposablecontext/</guid>
-      <description>Need to pass data downstream in your X&#43;&#43; CoC or framework call without polluting method signatures? Enter Disposable Contexts — your elegant and type-safe solution!</description>
-    </item>
-    <item>
-      <title>🔌 SysExtension Framework in D365FO: How I Learned to Stop Worrying and Love the Factory</title>
-      <link>https://IamAnirbanPaul.github.io/blogs/3-sysextensionfactoryfun/</link>
-      <pubDate>Fri, 11 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://IamAnirbanPaul.github.io/blogs/3-sysextensionfactoryfun/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;“The best code is the one that doesn’t know too much.” — A wise developer (probably debugging a massive &lt;code&gt;switch-case&lt;/code&gt; block)&lt;/p&gt;&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;-intro-the-anti-switch-revolution-begins&#34;&gt;🐱‍🏍 Intro: The Anti-Switch Revolution Begins&lt;/h2&gt;
-&lt;p&gt;Do you wake up in cold sweat remembering a 100-line &lt;code&gt;switch&lt;/code&gt; statement in your factory method?&lt;br&gt;
-Does adding a new subclass feel like open-heart surgery on a base class you don’t even own?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Welcome to the land of &lt;code&gt;SysExtension&lt;/code&gt;&lt;/strong&gt; — where your factories are clean, your base classes are blissfully ignorant, and your subclasses just… show up when needed. 🪄&lt;/p&gt;</description>
+      <description>Need to pass (or get) data downstream in your X&#43;&#43; CoC or framework call without polluting method signatures? Enter Disposable Contexts — your elegant and type-safe solution!</description>
     </item>
   </channel>
 </rss>

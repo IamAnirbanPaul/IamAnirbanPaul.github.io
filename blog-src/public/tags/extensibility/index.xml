@@ -14,7 +14,7 @@
       <link>http://localhost:1313/blogs/2-disposablecontext/</link>
       <pubDate>Thu, 10 Jul 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/blogs/2-disposablecontext/</guid>
-      <description>Need to pass data downstream in your X&#43;&#43; CoC or framework call without polluting method signatures? Enter Disposable Contexts — your elegant and type-safe solution!</description>
+      <description>Need to pass (or get) data downstream in your X&#43;&#43; CoC or framework call without polluting method signatures? Enter Disposable Contexts — your elegant and type-safe solution!</description>
     </item>
   </channel>
 </rss>
