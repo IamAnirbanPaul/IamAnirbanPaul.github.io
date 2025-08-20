@@ -1,13 +1,13 @@
 ---
 title: "Hold My Context While I CoC This 🍺🪄"
-description: "Need to pass data downstream in your X++ CoC or framework call without polluting method signatures? Enter Disposable Contexts — your elegant and type-safe solution!"
+description: "Need to pass (or get) data downstream in your X++ CoC or framework call without polluting method signatures? Enter Disposable Contexts — your elegant and type-safe solution!"
 date: 2025-07-10
-draft: true
+draft: false
 weight: 2
 author: "Anirban Paul"
 tags: ["X++", "D365 FinOps", "Extensibility"]
 cover: 
-    image: "assets/images/Disposable context.png"
+    image: "assets/images/DisposableContext.png"
     hidden: false
 ---
 
@@ -83,6 +83,12 @@ public final class ProdUpdReportFinishedRouteCardJournalContext implements Syste
 ---
 
 ## 🏗️ Using the Context in a CoC
+
+Suppose, we want to retrieve `ProdJournalTable.JournalId` from the `usedProdJournalTable()` method and use it in the `updateRouteConsumption()` method to set `parmRouteCardJournalId()`. 
+
+However, since `usedProdJournalTable()` is being called inside (or after) `updateRouteConsumption()`, the `ProdJournalTable` buffer returned from it isn’t maintained as a state and therefore isn’t directly usable.
+
+So, in this case, we can use the Disposable context.
 
 {{< highlight xpp >}}
 protected void updateRouteConsumption()
