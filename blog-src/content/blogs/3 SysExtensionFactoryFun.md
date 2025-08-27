@@ -160,7 +160,7 @@ public class BarcodeCode39 extends Barcode
 {
     // Overridden abstract methods
 
-    // Subclass-specific method
+    // Subclass-specific methods
 }
 
 [BarcodeTypeFactory(BarcodeType::Code128)]
@@ -168,7 +168,7 @@ public class BarcodeCode128 extends Barcode
 {
     // Overridden abstract methods
 
-    // Subclass-specific method
+    // Subclass-specific methods
 }
 ```
 
@@ -312,7 +312,7 @@ public class LedgerJournalTableData extends JournalTableData
 {
     // Overridden methods
 
-    // Subclass-specific method
+    // Subclass-specific methods
 }
 
 [SysTableNameFactory(tablestr(InventJournalTable))]
@@ -320,7 +320,7 @@ class InventJournalTableData extends JournalTableData
 {
     // Overridden methods
 
-    // Subclass-specific method
+    // Subclass-specific methods
 }
 ```
 
