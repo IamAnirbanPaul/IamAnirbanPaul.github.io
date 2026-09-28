@@ -4,10 +4,10 @@
     <title>D365 FinOps on iamanirbanpaul</title>
     <link>http://localhost:1313/tags/d365-finops/</link>
     <description>Recent content in D365 FinOps on iamanirbanpaul</description>
-    <generator>Hugo -- 0.147.9</generator>
+    <generator>Hugo -- 0.151.0</generator>
     <language>en-us</language>
     <copyright>Anirban Paul 2025</copyright>
-    <lastBuildDate>Wed, 27 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/d365-finops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>🥡 How to Pack a Container Like a Bengali Mom Packs a Lunchbox</title>
@@ -40,6 +40,17 @@ Whether you&amp;rsquo;re working with temporary in-memory structures or building
 &lt;p&gt;Do you wake up in cold sweat remembering a 100-line &lt;code&gt;switch&lt;/code&gt; statement in your factory method?&lt;br&gt;
 Does adding a new subclass feel like open-heart surgery on a base class you don’t even own?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Welcome to the land of &lt;code&gt;SysExtension&lt;/code&gt;&lt;/strong&gt; — where your factories are clean, your base classes are blissfully ignorant, and your subclasses just… show up when needed. 🪄&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>🤖 Before Copilot, There Were Plugins: The SysPlugin Story in D365FO</title>
+      <link>http://localhost:1313/blogs/4-syspluginfactorypro/</link>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blogs/4-syspluginfactorypro/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;“Switch-cases are dead. Long live plugins!” — A sleep-deprived developer after finally getting &lt;code&gt;SysPluginFactory&lt;/code&gt; to work&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-sysplugin-framework-in-d365-fo--the-secret-sauce-behind-pluggable-code-&#34;&gt;⚡ SysPlugin Framework in D365 F&amp;amp;O – The Secret Sauce Behind Pluggable Code 🍔&lt;/h2&gt;
+&lt;p&gt;If you thought &lt;strong&gt;SysExtension&lt;/strong&gt; was cool (goodbye, massive &lt;code&gt;switch-case&lt;/code&gt; blocks 👋), wait till you meet its cousin — the &lt;strong&gt;SysPlugin framework&lt;/strong&gt;. Think of SysPlugin as SysExtension but with &lt;em&gt;superpowers&lt;/em&gt; ⚡. Instead of just resolving classes dynamically, it lets you decide &lt;strong&gt;which plugin to use at runtime based on context&lt;/strong&gt;. Yup, smarter decisions, less boilerplate, more flexibility. 🚀&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
